@@ -1,0 +1,22 @@
+<div class="container">
+    <button mat-icon-button  (click)="goBack()">
+        <mat-icon>keyboard_backspace</mat-icon>
+      </button>
+    <mat-card>
+    <h2>Customer detail</h2>
+    <mat-list *ngIf="customer">
+        <mat-list>Fullname</mat-list>
+        <mat-list-item> <span>{{customer.salutation + " " + customer.firstName + " " + customer.lastName}}</span> </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list>Address</mat-list>
+        <mat-list-item> <span>{{customer.addressLine1 + " " + customer.addressLine2}}</span> </mat-list-item>    
+        <mat-list-item> <span>{{customer.city + " " + customer.state}}</span> </mat-list-item>
+        <mat-list-item> <span>{{ "Postal code: " + customer.zipCode}}</span> </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list>Contact information</mat-list>
+        <mat-list-item> <span>{{customer.emailAddress}}</span> </mat-list-item>
+        <mat-list-item> <span>{{customer.telePhoneNumber}}</span> </mat-list-item>
+    </mat-list>
+</mat-card>
+</div>
+
